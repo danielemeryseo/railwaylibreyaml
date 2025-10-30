@@ -5,7 +5,7 @@ includedTools:
   - google
 
 # Cache configuration
-cache: true
+cache: false
 
 # Web Search Configuration (TOP-LEVEL, not under interface)
 webSearch:
@@ -13,21 +13,21 @@ webSearch:
   serperApiKey: "${SERPER_API_KEY}"
   searxngInstanceUrl: "${SEARXNG_INSTANCE_URL}"
   searxngApiKey: "${SEARXNG_API_KEY}"
-  searchProvider: "serper" # Options: "serper", "searxng"
+  searchProvider: "serper"
 
   # Scraper Configuration
   firecrawlApiKey: "${FIRECRAWL_API_KEY}"
   firecrawlApiUrl: "${FIRECRAWL_API_URL}"
-  scraperType: "firecrawl" # Options: "firecrawl", "serper"
+  scraperType: "firecrawl"
 
   # Reranker Configuration
   jinaApiKey: "${JINA_API_KEY}"
   cohereApiKey: "${COHERE_API_KEY}"
-  rerankerType: "jina" # Options: "jina", "cohere"
+  rerankerType: "jina" 
 
   # General Settings
-  scraperTimeout: 7500 # Timeout in milliseconds for scraper requests
-  safeSearch: 1 # Options: 0 (OFF), 1 (MODERATE - default), 2 (STRICT)
+  scraperTimeout: 7500 
+  safeSearch: 1 
 
 # Interface Configuration
 interface:
