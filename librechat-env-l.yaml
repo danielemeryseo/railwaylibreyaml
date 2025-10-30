@@ -3,6 +3,7 @@ version: 1.2.4
 # Included tools configuration
 includedTools:
   - google
+  - serper
 
 # Cache configuration
 cache: false
@@ -11,19 +12,19 @@ cache: false
 webSearch:
   # Search Provider Configuration
   serperApiKey: "${SERPER_API_KEY}"
-  searxngInstanceUrl: "${SEARXNG_INSTANCE_URL}"
-  searxngApiKey: "${SEARXNG_API_KEY}"
+  # searxngInstanceUrl: "${SEARXNG_INSTANCE_URL}"
+  # searxngApiKey: "${SEARXNG_API_KEY}"
   searchProvider: "serper"
 
   # Scraper Configuration
-  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
-  firecrawlApiUrl: "${FIRECRAWL_API_URL}"
-  scraperType: "firecrawl"
+  # firecrawlApiKey: "${FIRECRAWL_API_KEY}"
+  # firecrawlApiUrl: "${FIRECRAWL_API_URL}"
+  scraperType: "serper"
 
   # Reranker Configuration
-  jinaApiKey: "${JINA_API_KEY}"
-  cohereApiKey: "${COHERE_API_KEY}"
-  rerankerType: "jina" 
+  # jinaApiKey: "${JINA_API_KEY}"
+  # cohereApiKey: "${COHERE_API_KEY}"
+  # rerankerType: "jina" 
 
   # General Settings
   scraperTimeout: 7500 
@@ -33,6 +34,14 @@ webSearch:
 interface:
   # Enable/disable the web search button in UI (boolean only!)
   webSearch: true
+  fileSearch: true
+  agents: true
+  runCode: true
+  fileCitations: true
+  sidePanel: true
+  modelSelect: false
+
+
   
   # MCP Servers UI configuration
   mcpServers:
