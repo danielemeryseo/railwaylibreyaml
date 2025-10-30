@@ -1,31 +1,39 @@
 version: 1.2.4
+
+# Included tools configuration
 includedTools:
   - google
-  
+
+# Cache configuration
 cache: true
 
+# Web Search Configuration (TOP-LEVEL, not under interface)
+webSearch:
+  # Search Provider Configuration
+  serperApiKey: "${SERPER_API_KEY}"
+  searxngInstanceUrl: "${SEARXNG_INSTANCE_URL}"
+  searxngApiKey: "${SEARXNG_API_KEY}"
+  searchProvider: "serper" # Options: "serper", "searxng"
+
+  # Scraper Configuration
+  firecrawlApiKey: "${FIRECRAWL_API_KEY}"
+  firecrawlApiUrl: "${FIRECRAWL_API_URL}"
+  scraperType: "firecrawl" # Options: "firecrawl", "serper"
+
+  # Reranker Configuration
+  jinaApiKey: "${JINA_API_KEY}"
+  cohereApiKey: "${COHERE_API_KEY}"
+  rerankerType: "jina" # Options: "jina", "cohere"
+
+  # General Settings
+  scraperTimeout: 7500 # Timeout in milliseconds for scraper requests
+  safeSearch: true # Boolean: enables safe search filtering
+
+# Interface Configuration
 interface:
-  webSearch:
-    # Search Provider Configuration
-    serperApiKey: "${SERPER_API_KEY}"
-    searxngInstanceUrl: "${SEARXNG_INSTANCE_URL}"
-    searxngApiKey: "${SEARXNG_API_KEY}"
-    searchProvider: "serper" # Options: "serper", "searxng"
+  # Enable/disable the web search button in UI (boolean only!)
+  webSearch: true
   
-    # Scraper Configuration
-    firecrawlApiKey: "${FIRECRAWL_API_KEY}"
-    firecrawlApiUrl: "${FIRECRAWL_API_URL}"
-    scraperType: "firecrawl" # Options: "firecrawl", "serper"
-  
-    # Reranker Configuration
-    jinaApiKey: "${JINA_API_KEY}"
-    jinaApiUrl: "${JINA_API_URL}"
-    cohereApiKey: "${COHERE_API_KEY}"
-    rerankerType: "jina" # Options: "jina", "cohere"
-  
-    # General Settings
-    scraperTimeout: 7500 # Timeout in milliseconds for scraper requests (default: 7500)
-    safeSearch: 1 # Options: 0 (OFF), 1 (MODERATE - default), 2 (STRICT)
   # MCP Servers UI configuration
   mcpServers:
     placeholder: 'MCP Servers'
@@ -40,7 +48,7 @@ interface:
     externalUrl: 'https://librechat.ai/tos'
     openNewTab: true
 
-
+# Registration configuration
 registration:
   socialLogins:
     - "discord"
@@ -48,7 +56,7 @@ registration:
     - "github"
     - "google"
     - "openid"
-
+    
 endpoints:
   custom:
     # 302AI
