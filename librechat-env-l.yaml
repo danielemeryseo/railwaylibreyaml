@@ -27,7 +27,7 @@ webSearch:
 
   # General Settings
   scraperTimeout: 7500 # Timeout in milliseconds for scraper requests
-  safeSearch: true # Boolean: enables safe search filtering
+  safeSearch: 1 # Options: 0 (OFF), 1 (MODERATE - default), 2 (STRICT)
 
 # Interface Configuration
 interface:
@@ -56,7 +56,7 @@ registration:
     - "github"
     - "google"
     - "openid"
-    
+
 endpoints:
   custom:
     # 302AI
